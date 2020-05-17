@@ -41,6 +41,5 @@ int main() {
     else
       printf("Thread# %d: Hello world\n", tid);
   }
-
   return EXIT_SUCCESS;
 }
