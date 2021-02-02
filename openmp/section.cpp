@@ -32,6 +32,7 @@ int main()
         function_1();
             
         #pragma omp section
+				fuction_2();
 
     }
     return 0;
