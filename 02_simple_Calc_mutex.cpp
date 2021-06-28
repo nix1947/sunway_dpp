@@ -1,34 +1,47 @@
 #include <iostream>
 #include <thread>
+#include <mutex>
 
 using namespace std;
+
+
+std::mutex mu;
+
+
+
+void shared_print(string msg, int result) {
+	mu.lock();
+   cout<<msg<<result<<endl;
+  mu.unlock();
+	
+
+} 
 
 // Function to add
 void add(int a, int b)
 {
-	std::cout << "The addition of two number is\n"
-			  << a + b << std::endl;
+	shared_print(string("The addition of two number is"), a + b);
+
 }
 
 // Function to subtract
 void sub(int a, int b)
 {
-	std::cout << "The subtraction of two number is\n"
-			  << a - b << std::endl;
+
+	shared_print(string("The subtraction of two number is"), a - b);
+
 }
 
 // Function to divide
 void division(int a, int b)
 {
-	std::cout << "The division of two number is\n"
-			  << (a / b) << std::endl;
+	shared_print(string("The division of two number is"), a / b);
 }
 
 // Function to multiply
 void mul(int a, int b)
 {
-	std::cout << "The multiplication of two number is\n"
-			  << a * b << std::endl;
+	shared_print(string("The multiplication of two number is"), a * b);
 }
 
 int main()
