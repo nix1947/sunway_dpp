@@ -7,14 +7,10 @@ using namespace std;
 
 std::mutex mu;
 
-
-
 void shared_print(string msg, int result) {
 	mu.lock();
    std::cout<<msg<<result<<endl;
   mu.unlock();
-	
-
 }
 
 void evenSum(long num) {
@@ -40,7 +36,7 @@ void oddSum(long num) {
 
 int main() {
 
-	long num = 912348508660;
+	long num = 2456789129;
 	std::thread t1(evenSum, num); 
 	std::thread t2(oddSum, num );
 

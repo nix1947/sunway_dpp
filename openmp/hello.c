@@ -37,7 +37,7 @@ int main() {
   {
     tid = omp_get_thread_num();
     if(tid == PARENT_TID)
-      printf("Parent: %d threads running\n", omp_get_num_threads());
+      printf("Parent: %d threads running\n", omp_get_thread_num());
     else
       printf("Thread# %d: Hello world\n", tid);
   }

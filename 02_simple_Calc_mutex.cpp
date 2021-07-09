@@ -11,7 +11,7 @@ std::mutex mu;
 
 void shared_print(string msg, int result) {
 	mu.lock();
-   cout<<msg<<result<<endl;
+   std::cout<<msg<<result<<endl;
   mu.unlock();
 	
 
