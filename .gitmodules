@@ -1,0 +1,3 @@
+[submodule "c++/coursera-cs400"]
+	path = c++/coursera-cs400
+	url = https://github.com/wadefagen/coursera.git
