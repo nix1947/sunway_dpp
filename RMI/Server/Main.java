@@ -1,7 +1,3 @@
-
-
-
-
 // Basic imports
 import java.rmi.registry.Registry;
 import java.rmi.registry.LocateRegistry;
@@ -13,7 +9,7 @@ public class Main {
 	// 1. Create an object and wrap inside RMI security Manager. 
 	// 2. Register the object to RMI registry
 	// 3.  Start the Rmi Server  
-  // 4. Listen to the particular port for client request. 
+       // 4. Listen to the particular port for client request. 
 
 	try {
 		
@@ -30,8 +26,8 @@ public class Main {
 
 	 Product stub = (Product) UnicastRemoteObject.exportObject(p1, 0);
 
-  // Bind the remote object's stub in the registry
-  Registry registry = LocateRegistry.getRegistry();
+    // Bind the remote object's stub in the registry
+   Registry registry = LocateRegistry.getRegistry();
 
   registry.bind("Laptop", stub);
 
